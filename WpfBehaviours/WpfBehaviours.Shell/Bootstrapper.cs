@@ -22,7 +22,7 @@ namespace WpfBehaviours.Shell
 
         protected override IModuleCatalog CreateModuleCatalog()
         {
- 
+ // 1 создается каталог модулей
             var moduleCatalog = new ModuleCatalog();
             moduleCatalog.AddModule(typeof(DealingModule));
             return moduleCatalog;
@@ -31,6 +31,7 @@ namespace WpfBehaviours.Shell
       
         protected override void ConfigureContainer()
         {
+            // 2 конфигурируется контэйнер
             base.ConfigureContainer();
 
  
@@ -55,12 +56,14 @@ namespace WpfBehaviours.Shell
 
         protected override DependencyObject CreateShell()
         {
+            // 3 создается шелл goto ShellWindow codebehind
             return this.Container.Resolve<ShellWindow>();
         }
 
 
         protected override void InitializeShell()
         {
+            // 7 показывает окно
             Window shellWindow = (Window)Shell;
             App.Current.MainWindow = shellWindow;
             App.Current.MainWindow.Show();

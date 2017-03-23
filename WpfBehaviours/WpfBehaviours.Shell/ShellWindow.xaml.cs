@@ -19,11 +19,13 @@ namespace WpfBehaviours.Shell
 {
     public partial class ShellWindow : Window
     {
+        // 4 резолвится ShellViewModel goto ShellViewModel ctor
         public ShellWindow
             (
                 [Dependency]ShellViewModel viewModel
             )
         {
+            // 6 инициализированную VM назначаем в качестве контекста данных
             this.DataContext = viewModel;
             InitializeComponent();
         }

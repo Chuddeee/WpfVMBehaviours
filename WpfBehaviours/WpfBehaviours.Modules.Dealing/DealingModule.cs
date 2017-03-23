@@ -25,7 +25,7 @@ namespace WpfBehaviours.Modules.Dealing
         private readonly IRegionNavigationCallbackHandler regionNavigationCallbackHelper;
         private readonly IRegionNavigationCapacityChecker regionNavigationCapacityChecker;
 
-
+        // 8
         public DealingModule(
             IUnityContainer container,
             IRegionManager regionManager,
@@ -92,8 +92,8 @@ namespace WpfBehaviours.Modules.Dealing
             childContainer.RegisterType<ISpotTileViewModelBehaviour, MonitorFakePairBehaviour>("MonitorFakePairBehaviour", new HierarchicalLifetimeManager());
             childContainer.RegisterType<ISpotTileViewModelBehaviour, OkCommandBehaviour>("OkCommandBehaviour", new HierarchicalLifetimeManager());
             childContainer.RegisterType<ISpotTileViewModelBehaviour, TimeoutBehaviour>("TimeoutBehaviour", new HierarchicalLifetimeManager());
-            
-            
+
+
             //services
             childContainer.RegisterType<IFakeSpotRateProvider, FakeSpotRateProvider>(new HierarchicalLifetimeManager());
 

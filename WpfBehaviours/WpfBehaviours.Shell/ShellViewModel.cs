@@ -14,6 +14,7 @@ namespace WpfBehaviours.Shell
 {
     public class ShellViewModel : INPCBase
     {
+        // 5 резолвим IEventMessager, регистрируем события goto ShellWindow codebehind
         public ShellViewModel(IEventMessager eventMessager)
         {
             Title = "Big XAML Apps Demo";
